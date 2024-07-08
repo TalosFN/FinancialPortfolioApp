@@ -1,4 +1,4 @@
-package com.example.financialportfolioapp.assetList
+package com.example.financialportfolioapp.presentation.assetList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,13 +22,15 @@ class AssetListFragment : Fragment() {
         _binding = FragmentAssetListBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnBack.setOnClickListener(){
+        binding.btnBack.setOnClickListener() {
             findNavController().navigate(R.id.action_asset_list_to_home_fragment)
         }
 
-        }
+    }
+
     companion object {
         @JvmStatic
         fun newInstance() = AssetListFragment()

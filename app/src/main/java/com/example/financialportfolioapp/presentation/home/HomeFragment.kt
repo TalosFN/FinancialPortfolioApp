@@ -1,5 +1,5 @@
 // HomeFragment.kt
-package com.example.financialportfolioapp.home
+package com.example.financialportfolioapp.presentation.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.financialportfolioapp.R
 import com.example.financialportfolioapp.databinding.FragmentHomeBinding
-import com.example.financialportfolioapp.partfolioList.PartfolioListFragment
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -33,7 +32,7 @@ class HomeFragment : Fragment() {
         binding.btnGoToAssetList.setOnClickListener {
             findNavController().navigate(R.id.action_home_fragment_to_asset_list)
         }
-        binding.btnGoToSettings.setOnClickListener{
+        binding.btnGoToSettings.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_settings_fragment)
         }
     }
@@ -42,7 +41,8 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    companion object{
+
+    companion object {
         @JvmStatic
         fun newInstance() = HomeFragment()
     }
